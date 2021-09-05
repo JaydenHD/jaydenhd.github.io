@@ -1,5 +1,5 @@
 ---
-title: "My Second Blog"
+title: "My Blog 2"
 date: 2021-05-04T00:30:10+08:00
 draft: false
 ---
