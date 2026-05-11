@@ -1,15 +1,19 @@
 ---
-title: "My Blog 2"
+title: "莎士比亚十四行诗：Sonnet 18"
 date: 2021-05-04T00:30:10+08:00
 draft: false
+description: "摘录 Sonnet 18，以及一版中文译文。"
+tags: ["诗歌", "莎士比亚", "翻译"]
+categories: ["阅读"]
+slug: "shakespeare-sonnet-18"
+aliases: ["/posts/my-blog2/"]
 ---
 
 > "什么是生命呵"  
 > "生命是时时刻刻不知道如何是好"
 
-# **《莎士比亚十四行诗》**
+## Sonnet 18
 
-### ***Sonnet 18***  
 *Shall I compare thee to a summer's day?*  
 *Thou art more lovely and more temperate:*  
 *Rough winds do shake the darling buds of May,*  
@@ -26,7 +30,8 @@ draft: false
 *So long lives this and this gives life to thee.* 
 
 
-**译文：**  
+## 译文
+
 我是否可以把你比喻成夏天？  
 虽然你比夏天更可爱更温和：  
 狂风会使五月娇蕾红消香断，  

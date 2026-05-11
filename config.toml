@@ -1,5 +1,46 @@
-baseURL = "http://jaydenhd.github.io"
-languageCode = "en-us"
+baseURL = "https://jaydenhd.github.io/"
+languageCode = "zh-cn"
 title = "JaydenHD"
 theme = "ananke"
+DefaultContentLanguage = "zh"
+Paginate = 6
+summaryLength = 36
+hasCJKLanguage = true
+enableRobotsTXT = true
 
+[sitemap]
+  changefreq = "monthly"
+  priority = 0.5
+  filename = "sitemap.xml"
+
+[[menu.main]]
+  name = "文章"
+  url = "/posts/"
+  weight = 1
+
+[[menu.main]]
+  name = "标签"
+  url = "/tags/"
+  weight = 2
+
+[[menu.main]]
+  name = "关于"
+  url = "/about/"
+  weight = 3
+
+[params]
+  env = "production"
+  author = "JaydenHD"
+  description = "JaydenHD 的个人博客，记录阅读、诗歌、技术与日常思考。"
+  github = "https://github.com/JaydenHD"
+  rss = "/index.xml"
+  background_color_class = "bg-near-black"
+  cover_dimming_class = "bg-black-50"
+  featured_image = "/images/gohugo-default-sample-hero-image.jpg"
+  mainSections = ["posts"]
+  recent_posts_number = 5
+  recent_copy = "最新文章"
+  read_more_copy = "继续阅读"
+  show_reading_time = true
+  post_content_classes = "serif"
+  custom_css = ["css/custom.css"]

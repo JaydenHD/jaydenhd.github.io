@@ -1,0 +1,22 @@
+{{ $featured_image := partial "func/GetFeaturedImage.html" . }}
+<article class="home-post">
+  {{ if $featured_image }}
+    {{ $featured_image := (trim $featured_image "/") | absURL }}
+    <a href="{{ .RelPermalink }}" class="home-post__image" aria-label="{{ .Title }}">
+      <img src="{{ $featured_image }}" alt="{{ .Title }}">
+    </a>
+  {{ end }}
+  <div class="home-post__body">
+    <p class="home-post__meta">
+      <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006-01-02" }}</time>
+      {{ with .Params.categories }}<span>{{ delimit . " / " }}</span>{{ end }}
+    </p>
+    <h2 class="home-post__title">
+      <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+    </h2>
+    <p class="home-post__summary">
+      {{ with .Description }}{{ . }}{{ else }}{{ .Summary | plainify | truncate 120 }}{{ end }}
+    </p>
+    <a class="read-more" href="{{ .RelPermalink }}">{{ $.Param "read_more_copy" | default (i18n "readMore") }}</a>
+  </div>
+</article>

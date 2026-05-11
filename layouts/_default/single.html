@@ -1,0 +1,33 @@
+{{ define "header" }}
+  {{ partial "page-header.html" . }}
+{{ end }}
+
+{{ define "main" }}
+  <article class="post-single">
+    {{ if eq .Section "posts" }}
+      <header class="post-single__header">
+        {{ with .CurrentSection }}
+          {{ if .Title }}
+            <a class="post-single__section" href="{{ .RelPermalink }}">{{ .Title }}</a>
+          {{ end }}
+        {{ end }}
+        <p class="post-single__meta">
+          <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "2006-01-02" }}</time>
+          {{ if eq (.Param "show_reading_time") true }}
+            <span>{{ .ReadingTime }} 分钟阅读</span>
+            <span>{{ .WordCount }} 字</span>
+          {{ end }}
+        </p>
+        {{ with .Description }}
+          <p class="post-single__description">{{ . }}</p>
+        {{ end }}
+      </header>
+    {{ end }}
+
+    <div class="post-content nested-copy-line-height nested-links nested-img {{ $.Param "post_content_classes" | default "serif" }}">
+      {{ .Content }}
+    </div>
+
+    {{ partial "tags.html" . }}
+  </article>
+{{ end }}

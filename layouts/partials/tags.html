@@ -1,0 +1,9 @@
+{{ with .Params.tags }}
+  <ul class="post-tags" aria-label="标签">
+    {{ range . }}
+      <li>
+        <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
+      </li>
+    {{ end }}
+  </ul>
+{{ end }}
